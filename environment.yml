@@ -1,0 +1,23 @@
+name: MemProtSim
+channels:
+  - ambermd
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - biopandas
+  - biopython
+  - numpy
+  - mdanalysis
+  - nglview
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - ipykernel
+  - jupyterlab
+  - notebook
+  - pip
+  - pip:
+      - pdb2pqr
+      - propka

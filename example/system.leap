@@ -1,0 +1,10 @@
+source leaprc.protein.ff19SB
+source leaprc.water.tip3p
+source leaprc.gaff2
+source leaprc.lipid21
+loadamberparams frcmod.ionsjc_tip3p
+system=loadpdb ./bilayer_protein_ppm3.pdb
+set system box 91.206 91.206 109.514
+saveamberparm system system.prmtop system.inpcrd
+savepdb system membrane_protein.pdb
+quit

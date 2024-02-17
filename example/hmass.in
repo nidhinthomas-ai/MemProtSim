@@ -1,0 +1,4 @@
+parm system.prmtop
+HMassRepartition
+outparm system.hmass.prmtop 
+quit
