@@ -47,14 +47,14 @@ sed '/HETATM\|DUM/d' input.pdb > output.pdb
 ### 3. Embedding Proteins into Lipid Membranes with PACKMOL-MEMGEN
 Within the AMBER module, PACKMOL-MEMGEN comes pre-installed. With AMBER activated, users can employ PACKMOL-MEMGEN to create systems of membranes with or without embedded proteins. The necessary arguments for this phase are detailed in the commands below. Since PPM3 local version has already determined protein orientation, the next steps focus on embedding into the lipid membrane.
 
-**--pdb pdbname_from_ppm3.pdb**: Specifies the input transmembrane protein PDB
-**--lipids POPC**: Constructs a POPC lipid membrane (lipid composition is adjustable)
-**--ratio 1**: Sets the POPC ratio to 1 (experiment with different compositions)
-**--preoriented**: Indicates the protein is oriented along the z-axis as per PPM coordinates
-**--salt --salt_c Na+ --saltcon 0.15**: Adds a 0.15 M NaCl salt concentration to the aqueous layer
-**--dist 10**: Sets the minimum distance from the protein to the box boundary in x, y, z directions
-**--dist_wat 15**: Specifies a 15 Ångström thickness for the water layer
-**--notprotonate --nottrim**: Omits further processing of the input protein PDB file
+**--pdb pdbname_from_ppm3.pdb**: Specifies the input transmembrane protein PDB  
+**--lipids POPC**: Constructs a POPC lipid membrane (lipid composition is adjustable)  
+**--ratio 1**: Sets the POPC ratio to 1 (experiment with different compositions)  
+**--preoriented**: Indicates the protein is oriented along the z-axis as per PPM coordinates  
+**--salt --salt_c Na+ --saltcon 0.15**: Adds a 0.15 M NaCl salt concentration to the aqueous layer  
+**--dist 10**: Sets the minimum distance from the protein to the box boundary in x, y, z directions  
+**--dist_wat 15**: Specifies a 15 Ångström thickness for the water layer  
+**--notprotonate --nottrim**: Omits further processing of the input protein PDB file  
 
 <pre>
 packmol-memgen --help packmol-memgen --pdb destination/pdbname_from_ppm3.pdb --lipids POPC --ratio 1 --preoriented --salt --salt_c Na+ --saltcon 0.15 --dist 10 --dist_wat 15 --notprotonate --nottrim
